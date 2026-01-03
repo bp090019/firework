@@ -151,7 +151,7 @@ class Firework {
                 ctx.globalAlpha = p.alpha;
                 ctx.fill();
 
-                // Add glow effect
+                Add glow effect
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size * 2, 0, Math.PI * 2);
                 ctx.fillStyle = p.color;
