@@ -30,7 +30,7 @@ class Firework {
             const heartCount = 2;
             const baseSize = 12;
         
-            // Initial explosion burst with random colors
+            Initial explosion burst with random colors
             for (let i = 0; i < 120; i++) {
                 const angle = Math.random() * Math.PI * 2;
                 const velocity = 8 + Math.random() * 6;
@@ -49,7 +49,7 @@ class Firework {
                 });
             }
         
-            // Heart shapes with random colors
+            Heart shapes with random colors
             for (let h = 0; h < heartCount; h++) {
                 const angle = (Math.PI * 2 * h) / heartCount;
                 const distance = 60 + Math.random() * 80;
@@ -66,7 +66,7 @@ class Firework {
                         y: heartY - heartSize * (13 * Math.cos(rad) - 5 * Math.cos(2 * rad) - 2 * Math.cos(3 * rad) - Math.cos(4 * rad))
                     };
 
-                    // Each particle in the heart can have a random color variation
+                    Each particle in the heart can have a random color variation
                     const particleColor = Math.random() > 0.8 ? 
                         this.colors[Math.floor(Math.random() * this.colors.length)] : 
                         heartColor;
@@ -102,7 +102,7 @@ class Firework {
                 this.createHeartParticles();
             }
 
-            // Draw trail
+            Draw trail
             this.trail.forEach((pos, index) => {
                 const alpha = (index / this.trailLength) * 0.5;
                 ctx.beginPath();
@@ -236,7 +236,7 @@ class FireworkShow {
     }
 }
 
-// Modified initialization
+Modified initialization
 window.onload = () => {
     const show = new FireworkShow('canvas');
     show.startCountdown();
